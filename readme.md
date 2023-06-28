@@ -14,7 +14,7 @@
 
 ## 🔰 Começando
 
-Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse projeto, temos a criação de um banco de dados MySQL e sua população, bem como a instalação da ferramenta que irá dar auxilio na gerencia desse servidor MySQL.
+Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse projeto, temos a criação e população de um servidor de banco de dados MySQL, bem como a instalação da ferramenta que irá dar auxilio na gerência desse servidor.
 
 ### 💾 Suporte de primeiro-nível
 
@@ -47,9 +47,15 @@ Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse proj
 ## A aplicação conta com as seguintes funcionalidades:
 
 
+### 🆙 Levantamento do servidor
+
+O projeto conta com alguns scripts que automatizam a subida de um servidor MySQL em um container Docker.
+
+<br/>
+
 ### 🛠️ Processo de ETL para a base de dados
 
-O processo irá carregar o arquivo em um dataframe, fazendo inferencia automatica de todas as colunas.
+O processo irá carregar o arquivo em um dataframe, fazendo inferência automática de todas as colunas.
 Será feita uma conexão ao servidor de base de dados levantado pelo container docker, que está configurado no projeto e, então, criada uma base de dados "movie" para que a tabela "movies" seja escrita.
 
 ---
@@ -94,7 +100,7 @@ stop_container_CLEAN.bat
 
 ## 2 - Dependências ETL
 
-As dependências de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construido.
+As dependências de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construído.
 
 > 💡
 >
@@ -110,9 +116,9 @@ Para executar o processo ETL, você precisa, antes, iniciar o dev container, pel
     <img src="assets\documentation\post_creation_env_run.png" width="50%" height="500vh">
 </div>
 
-Uma vez no container, os plugins do container serão instalados, bem como as dependencias python, já automatizadas pelo script ```prepare_env.sh```.
+Uma vez no container, os plugins do container serão instalados, bem como as dependências python, já automatizadas pelo script ```prepare_env.sh```.
 
-Com isso, basta executar as celulas do notebook jupyter ```main.ipynb``` e voilá.
+Com isso, basta executar as células do notebook jupyter ```main.ipynb``` e voilá.
 
 
 ## 📑 Licenças
