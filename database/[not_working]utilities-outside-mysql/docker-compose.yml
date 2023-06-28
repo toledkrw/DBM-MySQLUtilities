@@ -1,31 +1,19 @@
 version: '3.8'
-
 services:
-  mysql-1:
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: batata
-    volumes:
-      - ./data-1:/var/lib/mysql
-    ports:
-      - "3306:3306"
-
-  mysql-2:
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: batata
-    volumes:
-      - ./data-2:/var/lib/mysql
-    ports:
-      - "3307:3306"
-
-  my-sql-utilities:
+  mysql-utilities:
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
-    depends_on:
-      - mysql-1
-      - mysql-2
+    networks:
+      - shared_network        # Add this line
+    environment:
+      MYSQL_ROOT_PASSWORD: batata
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+networks:
+  shared_network:             # Add these lines
+    external: true
+    
