@@ -53,30 +53,21 @@ A aplicação conta com as seguintes funcionalidade:
 ### 🛠️ Processo de ETL para a base de dados
 
 O processo irá carregar o arquivo em um dataframe, fazendo inferencia automatica de todas as colunas.
-Será feita uma conexão ao servidor de base de dados levantado pelo container docker, que está configurado no projeto e, então, criada uma base de dados "<Nome-Da-Base>" para que a tabela "<Nome-Da-Tabela>" seja escrita.
+Será feita uma conexão ao servidor de base de dados levantado pelo container docker, que está configurado no projeto e, então, criada uma base de dados "movie" para que a tabela "movies" seja escrita.
 
 <br/>
 
-## 1 - Dependencias
+## 1 - Preparação do MySQL Server
 
-As dependencias de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construido.
-<div style="display:flex; width:80%; flex-direction:row; justify-content:space-between">
-    <img src="assets\documentation\reopen_in_container.jpg" width="50%" height="200vh">
-    <img src="assets\documentation\post_creation_env_run.png" width="50%" height="500vh">
-</div>
-
-> 💡
->
-> Caso, após a criação da venv, o sistema não ative automaticamente a venv você pode executar ```. prepare_env.sh``` novamente, diretamente pelo console, ou, você pode navegar até ``` cd python_venv/bin ``` e executar ```. activate```.
-
-## 2 - Execução
-
-Para iniciar o banco, levando consideração que você está utilizando o SO Windows, basta executar:
+Antes de iniciar o banco, primeiro você precisa criar uma network no docker para que o devcontainer possa se comunicar com o container onde está o mysql server, levando consideração que você está utilizando o SO Windows para executar os scripts ```.bat```:
 ```
 cd database/utilities-within-mysql
 create_docker_shared_network.bat
 ```
-e, finalmente:
+
+E, finalmente, para iniciar o banco basta executar:
+
+
 ```
 cd database/utilities-within-mysql
 start_container.bat
@@ -88,21 +79,42 @@ cd database/utilities-within-mysql
 stop_container.bat
 ```
 
-O projeto conta com scripts de iniciação e finalização limpas:
+>💡
+> 
+> O projeto conta com scripts de iniciação e finalização limpas:
 
-### Inicialização:
+### Inicialização limpa:
 ```
 cd database/utilities-within-mysql
 start_container_CLEAN.bat
 ```
-### Finalização:
+### Finalização limpa:
 ```
 cd database/utilities-within-mysql
 stop_container_CLEAN.bat
 ```
 
+## 2 - Dependencias ETL
+
+As dependências de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construido.
+
+> 💡
+>
+> Caso, após a criação da venv, o sistema não ative automaticamente a venv você pode executar ```'. prepare_env.sh'``` novamente, diretamente pelo console, ou, você pode navegar até ```'cd python_venv/bin'``` e executar ```'source activate'``` ou ```'. activate'```.
+
+
 ## 3 - Processo de ETL
 
+Para executar o processo ETL, você precisa, antes, iniciar o dev container, pelo plugin devcontainers.
+
+<div style="display:flex; width:100%; flex-direction:row; justify-content:space-between">
+    <img src="assets\documentation\reopen_in_container.jpg" width="50%" height="200vh">
+    <img src="assets\documentation\post_creation_env_run.png" width="50%" height="500vh">
+</div>
+
+Uma vez no container, os plugins do container serão instalados, bem como as dependencias python, já automatizadas pelo script ```prepare_env.sh```.
+
+Com isso, basta executar as celulas do notebook jupyter ```main.ipynb``` e voilá.
 
 
 ## 📑 Licenças
