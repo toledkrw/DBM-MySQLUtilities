@@ -16,14 +16,14 @@
 
 Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse projeto, temos a criação e população de um servidor de banco de dados MySQL, bem como a instalação da ferramenta que irá dar auxilio na gerência desse servidor.
 
-### 💾 Suporte de primeiro-nível
+### 💾 Ferramentas utilizadas
 
 [![vscode][vscode]][vscode-url]
+[![Docker][Docker]][Docker-url]
 
 ### 🤖 Tecnologias empregadas
 
 [![Python][Python]][Python-url]
-[![Docker][Docker]][Docker-url]
 
 ### 📋 Pré-requisitos
 
