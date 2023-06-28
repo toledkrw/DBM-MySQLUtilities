@@ -16,8 +16,6 @@
 
 Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse projeto, temos a criação de um banco de dados MySQL e sua população, bem como a instalação da ferramenta que irá dar auxilio na gerencia desse servidor MySQL.
 
-<br/>
-
 ### 💾 Suporte de primeiro-nível
 
 [![vscode][vscode]][vscode-url]
@@ -44,17 +42,17 @@ Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse proj
 
 <br/>
 
-## 🎨 Funcionalidades
+# 🎨 Funcionalidades
 
-A aplicação conta com as seguintes funcionalidade:
+## A aplicação conta com as seguintes funcionalidades:
 
-<br/>
 
 ### 🛠️ Processo de ETL para a base de dados
 
 O processo irá carregar o arquivo em um dataframe, fazendo inferencia automatica de todas as colunas.
 Será feita uma conexão ao servidor de base de dados levantado pelo container docker, que está configurado no projeto e, então, criada uma base de dados "movie" para que a tabela "movies" seja escrita.
 
+---
 <br/>
 
 ## 1 - Preparação do MySQL Server
@@ -94,7 +92,7 @@ cd database/utilities-within-mysql
 stop_container_CLEAN.bat
 ```
 
-## 2 - Dependencias ETL
+## 2 - Dependências ETL
 
 As dependências de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construido.
 
