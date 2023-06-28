@@ -1,1 +1,1 @@
-docker-compose down --rmi all --remove-orphans
+docker-compose down
