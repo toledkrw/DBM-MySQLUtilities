@@ -14,7 +14,7 @@
 
 ## 🔰 Começando
 
-Esse projeto foi criado para realizar
+Esse projeto foi criado para fazer uso da ferramenta MySQL-Utilities. Nesse projeto, temos a criação de um banco de dados MySQL e sua população, bem como a instalação da ferramenta que irá dar auxilio na gerencia desse servidor MySQL.
 
 <br/>
 
@@ -60,14 +60,23 @@ Será feita uma conexão ao servidor de base de dados levantado pelo container d
 ## 1 - Dependencias
 
 As dependencias de desenvolvimento estão dentro do arquivo ```requirements.txt```, que tem sua leitura automatizada assim que o container de desenvolvimento é construido.
-<div style="display:flex; width:100%; flex-direction:row;">
+<div style="display:flex; width:80%; flex-direction:row; justify-content:space-between">
     <img src="assets\documentation\reopen_in_container.jpg" width="50%" height="200vh">
     <img src="assets\documentation\post_creation_env_run.png" width="50%" height="500vh">
 </div>
 
+> 💡
+>
+> Caso, após a criação da venv, o sistema não ative automaticamente a venv você pode executar ```. prepare_env.sh``` novamente, diretamente pelo console, ou, você pode navegar até ``` cd python_venv/bin ``` e executar ```. activate```.
+
 ## 2 - Execução
 
 Para iniciar o banco, levando consideração que você está utilizando o SO Windows, basta executar:
+```
+cd database/utilities-within-mysql
+create_docker_shared_network.bat
+```
+e, finalmente:
 ```
 cd database/utilities-within-mysql
 start_container.bat
