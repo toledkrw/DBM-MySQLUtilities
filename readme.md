@@ -123,18 +123,18 @@ Distribuído sob a MIT License. Veja `LICENSE` para mais informações.
 
 <!-- BADGE - Contributors -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/toledkrw/IA_ML-Trabalho_1.svg?style=for-the-badge
-[contributors-url]: https://github.com/toledkrw/IA_ML-Trabalho_1/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/toledkrw/DBM-MySQLUtilities.svg?style=for-the-badge
+[contributors-url]: https://github.com/toledkrw/DBM-MySQLUtilities/graphs/contributors
 
 <!-- BADGE - Issues -->
 
-[issues-shield]: https://img.shields.io/github/issues/toledkrw/IA_ML-Trabalho_1.svg?style=for-the-badge
-[issues-url]: https://github.com/toledkrw/IA_ML-Trabalho_1/issues
+[issues-shield]: https://img.shields.io/github/issues/toledkrw/DBM-MySQLUtilities.svg?style=for-the-badge
+[issues-url]: https://github.com/toledkrw/DBM-MySQLUtilities/issues
 
 <!-- BADGE - License -->
 
-[license-shield]: https://img.shields.io/github/license/toledkrw/IA_ML-Trabalho_1.svg?style=for-the-badge
-[license-url]: https://github.com/toledkrw/IA_ML-Trabalho_1/blob/main/LICENSE
+[license-shield]: https://img.shields.io/github/license/toledkrw/DBM-MySQLUtilities.svg?style=for-the-badge
+[license-url]: https://github.com/toledkrw/DBM-MySQLUtilities/blob/main/LICENSE
 
 <!--  -->
 <!-- TECHNOLOGIES -->
