@@ -4,7 +4,7 @@
 	"runArgs": [
 		"--network=shared_network"
 	],
-	"postCreateCommand": ". prepare_env.sh",
+	"postCreateCommand": "bash prepare_env.sh",
 	"customizations": {
 		"vscode": {
 			"extensions": [
